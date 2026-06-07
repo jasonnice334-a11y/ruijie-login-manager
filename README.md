@@ -1,41 +1,54 @@
-# Ruijie Login Manager (Obfuscated)
+# Ruijie Login Manager (Termux အသုံးပြုရန်)
 
-This repository contains an obfuscated Python script (`nay.pyc`) designed to automate the login process for Ruijie networks using a voucher system. The original key-based authentication system has been removed, and the code has been compiled into bytecode (`.pyc`) for basic obfuscation.
+ဤ repository တွင် voucher စနစ်ကို အသုံးပြု၍ Ruijie ကွန်ရက်များသို့ အလိုအလျောက် login ဝင်ရောက်နိုင်ရန် ရည်ရွယ်ထားသော obfuscated Python script (`nay.pyc`) ပါဝင်ပါသည်။ မူရင်း key-based authentication စနစ်ကို ဖယ်ရှားထားပြီး၊ code များကို ဖတ်ရခက်စေရန် bytecode (`.pyc`) အဖြစ် ပြောင်းလဲထားပါသည်။
 
-## Features
+## လုပ်ဆောင်ချက်များ
 
-*   **Key System Removed**: The original Google Sheet-based key authentication and time integrity checks have been removed.
-*   **Code Obfuscation**: The Python script has been compiled into bytecode (`.pyc`) to make it harder to read and reverse-engineer.
-*   **Automated Login**: Automates the process of detecting the gateway, fetching a session ID, and logging in with a provided voucher.
+*   **Key စနစ် ဖယ်ရှားပြီး**: မူရင်း Google Sheet-based key authentication နှင့် အချိန်စစ်ဆေးမှုများကို ဖယ်ရှားထားပါသည်။
+*   **Code Obfuscation**: Python script ကို bytecode (`.pyc`) အဖြစ် compile လုပ်ထားသောကြောင့် ဖတ်ရန်နှင့် reverse-engineer လုပ်ရန် ပိုမိုခက်ခဲစေပါသည်။
+*   **အလိုအလျောက် Login**: Gateway ကို ရှာဖွေခြင်း၊ session ID ရယူခြင်းနှင့် ပေးထားသော voucher ဖြင့် login ဝင်ရောက်ခြင်းတို့ကို အလိုအလျောက် လုပ်ဆောင်ပေးပါသည်။
 
-## Usage
+## အသုံးပြုပုံ (Termux တွင်)
 
-### Prerequisites
+### လိုအပ်ချက်များ
 
-*   Python 3 installed on your system.
+*   သင့်ဖုန်းတွင် Termux app ထည့်သွင်းထားရပါမည်။
+*   Python 3 ကို Termux တွင် ထည့်သွင်းထားရပါမည်။
 
-### How to Run
+### အသုံးပြုနည်း အဆင့်ဆင့်
 
-1.  Download the `nay.pyc` file from this repository.
-2.  Open your terminal or command prompt.
-3.  Navigate to the directory where you saved `nay.pyc`.
-4.  Run the script using Python:
+1.  **Termux app ကို ဖွင့်ပါ**။
 
+2.  **လိုအပ်သော package များကို ထည့်သွင်းပါ** (တစ်ခါမှ မထည့်ဖူးသေးပါက)
     ```bash
-    python3 nay.pyc
+    pkg update && pkg upgrade
+    pkg install python git
     ```
 
-5.  The script will prompt you to enter your voucher code:
-
+3.  **GitHub repository ကို clone လုပ်ပါ**။
+    ```bash
+    git clone https://github.com/jasonnice334-a11y/ruijie-login-manager
     ```
-    Enter Voucher Code : 
+
+4.  **repository folder ထဲသို့ ဝင်ရောက်ပါ**။
+    ```bash
+    cd ruijie-login-manager
     ```
 
-6.  Enter your voucher code and press Enter.
+5.  **Script ကို စတင် Run ပါ**။
+    ```bash
+    python nay.pyc
+    ```
+
+6.  Script က `Enter Voucher Code :` ဟု တောင်းလာပါက သင်၏ voucher code ကို ရိုက်ထည့်ပြီး Enter နှိပ်ပါ။
+
+## အရေးကြီးမှတ်ချက်
+
+ကျွန်တော် ပြောင်းလဲပေးထားသော `nay.pyc` ဖိုင်သည် Python version 3.12 ဖြင့် compile လုပ်ထားခြင်း ဖြစ်ပါသည်။ ထို့ကြောင့် Termux တွင် အသုံးပြုသော Python version သည် 3.12 သို့မဟုတ် ထို့ထက်မြင့်သော version ဖြစ်ရန် လိုအပ်ပါသည်။ သင့် Termux ၏ Python version ကို စစ်ဆေးရန် `python --version` ဟု ရိုက်ထည့်နိုင်ပါသည်။
 
 ## Disclaimer
 
-This script is provided as-is. The obfuscation method used (Python bytecode compilation) is a basic form and can be reversed with sufficient effort. It is intended to make the code less immediately readable, not to provide strong security against determined attackers. Use at your own risk.
+ဤ script ကို လက်ရှိအတိုင်း ပေးအပ်ပါသည်။ အသုံးပြုထားသော obfuscation နည်းလမ်း (Python bytecode compilation) သည် အခြေခံအဆင့်သာဖြစ်ပြီး လုံလောက်သော ကြိုးစားမှုဖြင့် ပြန်လည်ဖော်ထုတ်နိုင်ပါသည်။ ၎င်းသည် code ကို ချက်ချင်းဖတ်ရခက်စေရန် ရည်ရွယ်ပြီး၊ ပြင်းထန်သော တိုက်ခိုက်သူများမှ ကာကွယ်ရန်အတွက် မဟုတ်ပါ။ မိမိ၏ ကိုယ်ပိုင်ဆုံးဖြတ်ချက်ဖြင့် အသုံးပြုပါ။
 
 ---
 
